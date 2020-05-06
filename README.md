@@ -11,7 +11,7 @@ A Simple tool to prevent others using your personal software or tools on regular
     ```
   * Use the provided [download](https://github.com/raja-ravi-prakash/Proccess-Authorization/archive/master.zip) option from github.
   
-  * And you also need [GCC Compiler](https://sourceforge.net/projects/mingw/) to run C language parts.
+  * And you also need [GCC Compiler](https://sourceforge.net/projects/mingw/) to run C language parts, For instructions visit [this](https://www.youtube.com/watch?v=Ubfgi4NoTPk).
   
 ## How To
   - From the root folder run **build.bat** which prompts you for the no.of programs names of them which you want to restrict.
