@@ -21,4 +21,8 @@ del init.exe
 move sys.bat dist
 move process.vbs dist
 move programs.name dist
+cd dist
+move process.vbs "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
+cd ..
 echo **build successfull**
+echo Restart to see changes...

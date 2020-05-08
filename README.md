@@ -42,16 +42,22 @@ A Simple tool to prevent others using your personal software or tools on regular
  
     ```shell
     - dist
-        - process.vbs 
+        - process.vbs # This is moved to startup directory
         - programs.name
         - sys.bat
     ```
     
- * Create a shortcut for **process.vbs** and copy it to the startup directory path which is as
+ * **process.vbs** can be found in below path. 
  
     ```shell
     C:\Users\{user}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
     ```
+ * Deleting the file mentioned above will undo everything but before deleteing it run the below command to reset
+   the state of the application.
+
+   ```shell
+   > clean
+   ```
  * That's it on regular boot no one can run these files, for you to run it just terminate all the cmd process the below can do that.
     ```shell
     > taskkill /IM cmd.exe /f
