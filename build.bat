@@ -1,10 +1,10 @@
 @echo off 
-set /p no=Enter no.of Programs :
+set /p no=Enter no.of Programs : 
 echo %no% > "programs.name"
 echo Enter Program names followed by Extensions
 echo.
 :loop
-    set /p name=Enter Program Name:
+    set /p name=Enter Program Name : 
     echo %name%>>programs.name
     set /a no=no-1
     if %no%==0 goto exit
@@ -21,5 +21,4 @@ del init.exe
 move sys.bat dist
 move process.vbs dist
 move programs.name dist
-cd dist
 echo **build successfull**

