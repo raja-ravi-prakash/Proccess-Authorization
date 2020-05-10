@@ -10,19 +10,26 @@ echo.
     if %no%==0 goto exit
 goto loop
 :exit
-echo.
 mkdir dist
 gcc package/package.c -o package
-gcc package/init.c -o init
 package
-init
 del package.exe
-del init.exe
 move sys.bat dist
-move process.vbs dist
-move programs.name dist
-cd dist
 move process.vbs "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
+del programs.name
+echo.
+set /p pass=Create Password :
+cd package
+echo.
+echo Password = %pass%
+python sha.py %pass%>temp
+set /p hash=<temp
+echo Hash = %hash%
+del temp
+setx ronin_h %hash%
+setx ronin %__cd__%
 cd ..
+echo.
 echo **build successfull**
-echo Restart to see changes...
+echo.
+echo Restart to see the changes.
