@@ -19,7 +19,7 @@ A Simple tool to prevent others using your personal software or tools on regular
 ## How To
 
 - From the root folder run **build.bat** which prompts you for the no.of programs names of them which you want to restrict.
-- And it prompts you for a password, so you can use it later to deactivate this current session.
+- And it prompts you for a password, so you can use it later to deactivate current running session.
 
   ```shell
   > build # Example
