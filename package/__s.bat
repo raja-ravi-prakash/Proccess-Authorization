@@ -8,8 +8,8 @@ if %hash%==%ronin_h% goto yes
 goto no
 
 :yes
-    echo Yes
+    taskkill /IM cmd.exe /f
     goto exit
 :no
-    echo Wrong
+    echo Wrong Password
 :exit
