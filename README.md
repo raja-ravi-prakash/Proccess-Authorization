@@ -58,7 +58,7 @@ A Simple tool to prevent others using your personal software or tools on regular
 - That's it on regular boot no one can run these files, for you to run it below can do that.
 
   ```shell
-  > %ronin%_s <your_password> # without <>
+  > %ronin%__s <your_password> # without <>
   ```
 
 - And fell free to contribue (or) create an issue if something doesn't work as expected.
