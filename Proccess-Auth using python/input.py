@@ -5,7 +5,6 @@ while(True):
 	if(n=='q'):
 		f.close()
 		break
-	f.write(n.lower())
-	f.write('\n')
+	f.write(n+'\n')
 print('Your Processes are being blacklisted and are not be able to open')
 
